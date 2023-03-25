@@ -1,10 +1,7 @@
 let messageStack = [
     {
      "role": "system",
-     "content": "You are an AI named Ariana 
-assistant for a fitness and nutrition 
-app . Keep your responses 
-brief, below 50 words."
+     "content": "You are an AI assistant named Ariana  for a fitness and nutrition app . Keep your responses brief, below 50 words."
     },
     {
      "role": "user",
@@ -12,8 +9,7 @@ brief, below 50 words."
     },
     {
      "role": "assistant",
-     "content": "Hi, I’m Ariana. Your AI 
-assistant."
+     "content": "Hi, I’m Ariana. Your AI assistant."
     },
 ]
 
@@ -35,11 +31,10 @@ const getResponse = async () => {
 
         const data = await response.json();
         const responseText = data.data;
-        messageStack.push({ "role": "assistant", "content": 
-  `${responseText}` })
+        messageStack.push({ "role": "assistant", "content": `${responseText}` })
         
-  appendMessage(responseText, 'assistant')
-
+        appendMessage(responseText, 'assistant')
+        
     } catch (error) {
         console.log(error)
     }
